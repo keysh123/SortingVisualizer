@@ -1,0 +1,37 @@
+<h1 style="    text-align: center;
+    border-bottom: 5px double black;
+    
+    padding: 5px;
+    font-size: 3.5rem; padding-bottom:13px"><b>-> Quick Sort Time and Space Complexity <-</b></h1>
+<br> <br>
+<h2 style="text-align:left;">Time Complexity:</h2>
+<ul style="font-size:1.2rem">
+<br>    <li><strong>Best Case:</strong> O(n log n) - In the best case scenario, Quick Sort exhibits optimal time complexity when the pivot selection and partitioning result in roughly equal partitions, effectively dividing the input into halves.</li>
+ <br>   <li><strong>Worst Case:</strong> O(n^2) - In the worst case, when the pivot selection consistently leads to highly imbalanced partitions (e.g., already sorted input), Quick Sort degrades to quadratic time complexity.</li>
+    <li><strong>Average Case:</strong> O(n log n) - On average, Quick Sort performs efficiently with a time complexity of O(n log n) when the pivot selection and partitioning strategies are chosen well.</li>
+</ul>
+<br>
+<h2 style="text-align:left;">Space Complexity:</h2 style="font-size:1.5rem">
+<ul>
+    <li style="font-size:1.2rem">Quick Sort has a space complexity of O(log n) for the stack space required by recursive function calls. In the worst case, it may require O(n) stack space for deeply nested recursion.</li>
+</ul>
+<br>
+<h2 style="text-align:left;">Best Case Scenario:</h2>
+<ul style="font-size:1.2rem">
+    <li>The best case occurs when the pivot selection and partitioning result in balanced partitions with roughly equal elements.</li>
+    <li>Quick Sort achieves optimal time complexity, O(n log n), effectively dividing the input into halves at each step.</li>
+    <li>It is highly efficient in this scenario.</li>
+</ul>
+<br>
+<h2 style="text-align:left;">Worst Case Scenario:</h2>
+<ul style="font-size:1.2rem">
+    <li>The worst case occurs when the pivot selection consistently leads to highly imbalanced partitions, such as when the input is already sorted or nearly sorted.</li>
+    <li>Quick Sort degrades to quadratic time complexity, O(n^2), which is highly inefficient.</li>
+    <li>Choosing the pivot strategically can mitigate this issue in practice.</li>
+</ul>
+<br>
+<h2 style="text-align:left;">Average Case Scenario:</h2>
+<ul style="font-size:1.2rem">
+    <li>On average, Quick Sort performs efficiently with a time complexity of O(n log n) when the pivot selection and partitioning strategies are chosen well, leading to approximately balanced partitions.</li>
+    <li>It is a widely used and practical sorting algorithm known for its speed in real-world scenarios.</li>
+</ul>

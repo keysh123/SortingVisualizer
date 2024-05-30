@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="bubblesort.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <script src="selectionsort.js"></script>
+    <title>VisualSortHub.com</title>
+  
+</head>
+<body onload="start()">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <img src="images/logo.png" alt="" class="logo">
+            <button class="navbar-toggler menu" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 4%;">
+                    <li class="nav-item" >
+                        <a class="nav-link" href="../index.html" title="Back to home page"><i class="fa-solid fa-house" style="color: white;"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="bubblesortB" href="../Details/bubblesortD.html">Bubble Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="selectionsortB" href="../Details/selectionsortD.html">Selection Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="insertionsortB" href="../Details/insertionsortD.html">Insertion Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="mergesortB" href="../Details/countsortD.html">Counting Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="quicksortB" href="../Details/quicksortD.html">Quick Sort</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="letssort">
+               Selection Sort !
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="navbars">
+        <a href="../co/selectionsortC.html" ><i class="fa-solid fa-code"></i>&nbsp; &nbsp; Code</a>
+        <a href="../visualazation/selectionsort.html" class="active1"><i class="fa-solid fa-eye"></i>&nbsp; &nbsp; Visualazation</a>
+        <a href="../graph/selection_graph.html" ><i class="fa-solid fa-chart-line"></i>&nbsp; &nbsp; Graph</a>
+        <a href="../complexity/complexityss.html" ><i class="fa-solid fa-magnifying-glass"></i>&nbsp; &nbsp; Complexity</a>
+    </div>
+    <div id="op">
+        <li><a href="../co/selectionsortC.html">Code</a></li>
+        <li><a href="../visualazation/selectionsort.html">Visualazation</a></li>
+        <li><a href="../graph/selection_graph.html">Graph</a></li>
+        <li><a href="../complexity/complexityss.html">Complexity</a></li>
+    </div>
+
+    <div class="maincontent" style="text-align: center;">
+    <br>
+       <input type="range" class="form-range" min="0" max="10" id="customrange" value="7">
+        <span id="sliderValue">7</span>
+       <br>
+       <div style="font-family: cursive;
+       font-size: 1.5rem;"> Minimum element : <span id="k1">-</span></div>
+        <div id="holder">  </div>
+        <br>
+    <button id="sort"  onclick="sorting()" class="btn">Sort</button>
+    <br> <br>
+    <div id="step"></div>
+
+
+      <div id="colorIndications" class="color-indications">
+        <p><span class="color-code blue"></span>indicates the minimum element</p>
+        
+        <p><span class="color-code pink"></span>shows comparing the present with minimum</p>
+        
+        <p><span class="color-code yellow"></span>indicates swapping</p>
+        <p><span class="color-code light-green"></span>sorted at correct position</p>
+        </div>
+     
+        <br>
+        <h2 >-: Reference video :-</h2>
+      <video src="images/insertion.mp4" controls ></video> 
+    
+    
+      <div class="info">
+        <h2>About Selection Sort!!</h2>
+        <p style="margin: 20px;">Selection Sort is a straightforward comparison-based sorting algorithm that divides the input list into two parts: the sorted part and the unsorted part. Here's a more detailed explanation:</p>
+    
+        <p style="margin: 20px;">Key Operation: The key operation in Selection Sort involves repeatedly finding the minimum (or maximum) element from the unsorted part and swapping it with the first element of the unsorted part. This gradually builds the sorted part of the list.</p>
+    
+        <p style="margin: 20px;">Iterative Sorting: Selection Sort works iteratively, making multiple passes through the unsorted part to select the minimum (or maximum) element. This process continues until the entire list is sorted.</p>
+    
+        <p style="margin: 20px;">Efficiency: Selection Sort is not the most efficient sorting algorithm for large datasets as it has a time complexity of O(n^2), making it less suitable for large or nearly sorted lists. However, it's easy to understand and implement.</p>
+    
+        <p style="margin: 20px;">Use Cases: Selection Sort is primarily used for educational purposes and for small lists, where its simplicity and ease of implementation can be advantageous. It is less suitable for production use when dealing with large or complex datasets.</p>
+    </div>
+    
+    </div>
+    <footer >
+        <div class="footer-social">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="../Details/bubblesortD.html">Bubble Sort</a></li>
+                <li><a href="../Details/insertionsortD.html">Insertion Sort</a></li>
+                <li><a href="../Details/selectionsortD.html">Selection Sort</a></li>
+                <li><a href="../Details/countsortD.html">Counting Sort</a></li>
+                <li><a href="../Details/quicksortD.html">Quick Sort</a></li>
+            </ul>
+        </div>
+        <div class="divlast">
+            &copy; 2023 All Rights Reserved
+        </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+    
+    <script>
+              const slider = document.getElementById('customrange');
+         const sliderValue = document.getElementById('sliderValue');
+        
+         slider.addEventListener('input', () => {
+           sliderValue.textContent = slider.value;
+          
+         
+           if(b==1){
+         an= confirm("You want to start again ? ");
+         if(an==true){
+            c=1;
+
+           
+            generate();  
+            document.getElementById("sort").removeAttribute("disabled");
+            document.getElementById("step").innerHTML="";
+            b=0;
+           
+           
+         }
+         else{
+
+            c=0;
+         }
+          }  
+          else{
+            
+            generate();  
+          }
+            
+         });
+         
+       
+         generate();
+         function  start(){
+            c=0;
+            b=0;
+         }
+
+        </script>
+
+</body>
+</html>

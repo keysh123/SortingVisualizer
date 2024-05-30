@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="bubblesort.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <title>VisualSortHub.com</title>
+</head>
+
+<body onload="start()">
+   <script src="quicksort.js"></script>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <img src="images/logo.png" alt="" class="logo">
+            <button class="navbar-toggler menu" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 4%;">
+                    <li class="nav-item" >
+                        <a class="nav-link" href="../index.html" title="Back to home page"><i class="fa-solid fa-house" style="color: white;"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="bubblesortB" href="../Details/bubblesortD.html">Bubble Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="selectionsortB" href="../Details/selectionsortD.html">Selection Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="insertionsortB" href="../Details/insertionsortD.html">Insertion Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="mergesortB" href="../Details/countsortD.html">Counting Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="quicksortB" href="../Details/quicksortD.html">Quick Sort</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="letssort">
+                Quick Sort !
+            </div>
+        </div>
+    </nav>
+    <div class="navbars">
+        <a href="../co/quicksortC.html" ><i class="fa-solid fa-code"></i>&nbsp; &nbsp; Code</a>
+        <a href="../visualazation/quicksort.html" class="active1"><i class="fa-solid fa-eye"></i>&nbsp; &nbsp; Visualazation</a>
+        <a href="../graph/quick_graph.html" ><i class="fa-solid fa-chart-line"></i>&nbsp; &nbsp; Graph</a>
+        <a href="../complexity/complexityqs.html" ><i class="fa-solid fa-magnifying-glass"></i>&nbsp; &nbsp; Complexity</a>
+    </div>
+    <div id="op">
+        <li><a href="../co/quicksortC.html">Code</a></li>
+        <li><a href="../visualazation/quicksort.html">Visualazation</a></li>
+        <li><a href="../graph/quick_graph.html">Graph</a></li>
+        <li><a href="../complexity/complexityqs.html">Complexity</a></li>
+    </div>
+    <div class="maincontent" style="text-align: center;">
+    <br>
+        <input type="range" class="form-range" min="0" max="10" id="customrange" value="7">
+         <span id="sliderValue">7</span>
+        <br>
+        <div style="font-family: cursive;
+        font-size: 1.5rem;"> Pivot : <span id="p"></span></div>
+         <div id="holder"> 
+           
+    </div> <br>
+    
+     <div class="data">
+      
+      <button id="sort"  onclick="sorting()" class="btn">Sort</button>
+     
+     </div>
+     <br>
+ <div id="step"></div>
+ 
+       <div id="colorIndications" class="color-indications">
+        <p><span class="color-code light-green"></span> Pivot element i.e. partioning according to his element</p>
+         <p><span class="color-code yellow"></span>moving right orange type border denotes current left pointer</p>
+         
+         <p><span class="color-code light-blue"></span>moving left blue type  border denotes current right pointer</p>
+         
+         <p><span class="color-code red"></span> the red elements gets their correct position</p>
+         <p>**different shape shows the current subarray</p>
+         </div>
+      
+         <br>
+         <h2 >-: Reference video :-</h2>
+       <video src="images/quick.mp4" controls ></video> 
+ 
+     
+     <div class="info">
+        <h2>About Quick Sort</h2>
+        <p style="margin: 20px;">Quick Sort is a highly efficient and widely used sorting algorithm that follows the divide-and-conquer strategy to sort a list or array of elements. It is known for its excellent average and best-case time complexity, making it a popular choice for sorting large datasets.</p>
+        <p style="margin: 20px;">Partitioning: The core of the Quick Sort algorithm is the partitioning process. It works by selecting a pivot element from the array and rearranging the elements such that all elements less than the pivot are on the left, and all elements greater than the pivot are on the right. This effectively places the pivot element in its correct sorted position.</p>
+        <p style="margin: 20px;">Recursion: Once the pivot element is in its correct position, the array is divided into two sub-arrays, one on the left of the pivot and one on the right. Quick Sort is then applied recursively to these sub-arrays. This process of partitioning and sorting the sub-arrays continues until the entire array is sorted.</p>
+        <p style="margin: 20px;">Efficiency: Quick Sort is efficient because, on average, it has a time complexity of O(n log n). This makes it faster than many other sorting algorithms, especially when dealing with large datasets. However, in the worst case, when poorly chosen pivot elements consistently lead to unbalanced partitions, the time complexity can degrade to O(n^2).</p>
+        <p style="margin: 20px;">Choosing the Pivot: The choice of the pivot element can significantly impact the performance of Quick Sort. There are various strategies for selecting the pivot, such as choosing the first element, the last element, the middle element, or a random element. Some advanced implementations use techniques like the "median of three" to improve pivot selection.</p>
+        <p style="margin: 20px;">In-Place Sorting: Quick Sort can be implemented in-place, meaning it doesn't require additional memory for temporary storage. This makes it memory-efficient and suitable for sorting very large datasets.</p>
+        <p style="margin: 20px;">Quick Sort is a versatile and efficient sorting algorithm that is commonly used in practice, often as part of library functions in programming languages. Its adaptability to various situations and relatively low memory usage contribute to its popularity in real-world applications.</p>
+         </div>
+     
+     </div>
+     <footer >
+        <div class="footer-social">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="../Details/bubblesortD.html">Bubble Sort</a></li>
+                <li><a href="../Details/insertionsortD.html">Insertion Sort</a></li>
+                <li><a href="../Details/selectionsortD.html">Selection Sort</a></li>
+                <li><a href="../Details/countsortD.html">Counting Sort</a></li>
+                <li><a href="../Details/quicksortD.html">Quick Sort</a></li>
+            </ul>
+        </div>
+        <div class="divlast">
+            &copy; 2023 All Rights Reserved
+        </div>
+</footer>
+     <script>
+             const slider = document.getElementById('customrange');
+         const sliderValue = document.getElementById('sliderValue');
+        
+         slider.addEventListener('input', () => {
+           sliderValue.textContent = slider.value;
+          
+         
+           if(b==1){
+         an= confirm("You want to start again ? ");
+         if(an==true){
+            c=1;
+
+           
+            generate();  
+            document.getElementById("sort").removeAttribute("disabled");
+            document.getElementById("step").innerHTML="";
+            b=0;
+           
+           
+         }
+         else{
+
+            c=0;
+         }
+          }  
+          else{
+            
+            generate();  
+          }
+            
+         });
+         
+       
+         generate();
+         function  start(){
+            c=0;
+            b=0;
+         }
+
+ 
+ 
+         </script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>

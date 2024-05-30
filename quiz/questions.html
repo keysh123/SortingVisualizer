@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+              
+</head>
+
+<body>
+    <div class="container-fluid">
+      
+       
+        <br>
+        <form class="mt-4" action="check.php" method="post"
+            style="border: 1px double black; padding: 50px; background-color: #f3f3f3; border-radius: 20px;">
+            <ol class="list-unstyled">
+                <!-- Question 1: Bubble Sort -->
+                <li>
+                    <p>1. What is the time complexity of the Bubble Sort algorithm in the worst-case scenario?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1" value="a" id="q1a">
+                        <label class="form-check-label" for="q1a">O(n)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1" value="b" id="q1b">
+                        <label class="form-check-label" for="q1b">O(n log n)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1" value="c" id="q1c">
+                        <label class="form-check-label" for="q1c">O(n^2)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1" value="d" id="q1d">
+                        <label class="form-check-label" for="q1d">O(1)</label>
+                    </div>
+                </li>
+                <br><br>
+                <!-- Question 2: Insertion Sort -->
+                <li>
+                    <p>2. How does the Insertion Sort algorithm work?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2" value="a" id="q2a">
+                        <label class="form-check-label" for="q2a">Divide and conquer</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2" value="b" id="q2b">
+                        <label class="form-check-label" for="q2b">Swapping adjacent elements</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2" value="c" id="q2c">
+                        <label class="form-check-label" for="q2c">Building a binary tree</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2" value="d" id="q2d">
+                        <label class="form-check-label" for="q2d">Building a sorted subarray</label>
+                    </div>
+                </li>
+                <br><br>
+                <!-- Question 3: Quick Sort -->
+                <li>
+                    <p>3. Which sorting algorithm is based on the divide-and-conquer strategy?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q3" value="a" id="q3a">
+                        <label class="form-check-label" for="q3a">Bubble Sort</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q3" value="b" id="q3b">
+                        <label class="form-check-label" for="q3b">Insertion Sort</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q3" value="c" id="q3c">
+                        <label class="form-check-label" for="q3c">Quick Sort</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q3" value="d" id="q3d">
+                        <label class="form-check-label" for="q3d">Selection Sort</label>
+                    </div>
+                </li>
+                <br><br>
+                <!-- Question 4: Counting Sort -->
+                <li>
+                    <p>4. Counting Sort is most efficient when sorting:</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q4" value="a" id="q4a">
+                        <label class="form-check-label" for="q4a">Floating-point numbers</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q4" value="b" id="q4b">
+                        <label class="form-check-label" for="q4b">Negative integers</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q4" value="c" id="q4c">
+                        <label class="form-check-label" for="q4c">Integers within a known range</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q4" value="d" id="q4d">
+                        <label class="form-check-label" for="q4d">Randomly shuffled elements</label>
+                    </div>
+                </li>
+                <br><br>
+                <!-- Question 5: Selection Sort -->
+                <li>
+                    <p>5. How does the Selection Sort algorithm work?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q5" value="a" id="q5a">
+                        <label class="form-check-label" for="q5a">Recursively dividing the array</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q5" value="b" id="q5b">
+                        <label class="form-check-label" for="q5b">Repeatedly selecting the minimum element</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q5" value="c" id="q5c">
+                        <label class="form-check-label" for="q5c">Swapping adjacent elements</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q5" value="d" id="q5d">
+                        <label class="form-check-label" for="q5d">Building a binary tree</label>
+                    </div>
+                </li>
+                <li>
+                    <br><br>
+                    <p>6. How is the main drawback of bubble sort?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q6" value="a" id="q6a">
+                        <label class="form-check-label" for="q6a">Inefficient for large data sets</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q6" value="b" id="q6b">
+                        <label class="form-check-label" for="q6b">Requires additional memory</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q6" value="c" id="q6c">
+                        <label class="form-check-label" for="q6c">unstable sorting</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q6" value="d" id="q6d">
+                        <label class="form-check-label" for="q6d">No drawback; it's always efficient</label>
+                    </div>
+                </li>
+                <li>
+                    <br><br>
+                    <p>7. Which sorting algorithm is considered as not an in-place sorting algorithm?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q7" value="a" id="q7a">
+                        <label class="form-check-label" for="q7a">Counting sort</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q7" value="b" id="q7b">
+                        <label class="form-check-label" for="q7b">Quick sort</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q7" value="c" id="q7c">
+                        <label class="form-check-label" for="q7c">Selection sort</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q7" value="d" id="q7d">
+                        <label class="form-check-label" for="q7d">Bubble sort</label>
+                    </div>
+                </li>
+                <br><br>
+                <p>8. In Counting Sort, what is the range of input values it can handle?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" value="a" id="q8a">
+                    <label class="form-check-label" for="q8a">Any range of values</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" value="b" id="q8b">
+                    <label class="form-check-label" for="q8b">Positive integers only</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" value="c" id="q8c">
+                    <label class="form-check-label" for="q8c">Negative integers only</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" value="d" id="q8d">
+                    <label class="form-check-label" for="q8d">Non-integer values only</label>
+                </div>
+                </li>
+                <br><br>
+                <p>9. Which sorting algorithm is known for the simplicity and ease of implementation?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" value="a" id="q9a">
+                    <label class="form-check-label" for="q9a">Counting sort</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" value="b" id="q9b">
+                    <label class="form-check-label" for="q9b">Quick sort</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" value="c" id="q9c">
+                    <label class="form-check-label" for="q9c">Insertion sort</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" value="d" id="q9d">
+                    <label class="form-check-label" for="q9d">Bubble sort</label>
+                </div>
+                </li>
+                <br><br>
+                <p>10. What is the primary characteristic of stable sorting algorithms?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" value="a" id="q10a">
+                    <label class="form-check-label" for="q10a">They sort elements in a stable, predictable
+                        pattern</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" value="b" id="q10b">
+                    <label class="form-check-label" for="q10b">They work well with large datasets</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" value="c" id="q10c">
+                    <label class="form-check-label" for="q10c">The relative order of equal elements is preserved</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" value="d" id="q10d">
+                    <label class="form-check-label" for="q10d">They have a time complexity of O(1)</label>
+                </div>
+                </li>
+
+
+            </ol>
+
+            <button type="submit" class="btn btn-primary mt-4">Submit</button>
+        </form>
+    </div>
+
+    
+</body>
+
+</html>

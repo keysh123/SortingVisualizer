@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>VisualSortHub.com</title>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="graph.css">
+    <style>
+        .active12{
+    filter: invert(100%);
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    box-shadow: 0 0 0 1px black;
+}
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container-fluid d-flex flex-column" style="height: 100vh;"> -->
+        <!-- <div class="row"> -->
+            <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <img src="images/logo2.png" alt="" class="logo">
+                    <button class="navbar-toggler menu" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 4%;">
+                            <li class="nav-item">
+                                <a class="nav-link" id="home" href="../index.html" title="Back to home page"><i class="fa-solid fa-house" style="color: white;"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="bubblesortB" href="../Details/bubblesortD.html">Bubble Sort</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="selectionsortB" href="../Details/selectionsortD.html">Selection Sort</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="insertionsortB" href="../Details/insertionsortD.html">Insertion Sort</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="mergesortB" href="../Details/countsortD.html">Counting Sort</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="quicksortB" href="../Details/quicksortD.html">Quick Sort</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="letssort">
+                        Bubble Sort !
+                    </div>
+                </div>
+            </nav>
+        <!-- </div> -->
+        <!-- <div class="row flex-grow-1"> -->
+            <!-- <div class="col-2"> -->
+                <div class="navbars">
+                    <a href="../co/bubblesortC .html" style="color: white;"><i class="fa-solid fa-code"></i>&nbsp;&nbsp;&nbsp;Code</a>
+                    <a href="../visualazation/bubblesort.html" style="color: white;"><i class="fa-solid fa-eye"></i>&nbsp;&nbsp;&nbsp;Visualization</a>
+                    <a href="#"  class="active12"><i class="fa-solid fa-chart-line"></i>&nbsp;&nbsp;&nbsp;Graph</a>
+                    <a href="../complexity/complexitybs.html" style="color: white;"><i class="fa-solid fa-magnifying-glass"></i>&nbsp;&nbsp;&nbsp;Complexity</a>
+                </div>
+                <div id="op">
+                    <li><a href="../co/bubblesortC .html">Code</a></li>
+                    <li><a href="../visualazation/bubblesort.html">Visualization</a></li>
+                    <li><a href="#">Graph</a></li>
+                    <li><a href="../complexity/complexitybs.html">Complexity</a></li>
+                </div>
+                <br><br>
+            <!-- </div> -->
+            <!-- <div class="col-10"> -->
+                <div class="main-content">
+                    <label for="rangeInput">Select Range:</label>
+                    <input type="range" id="rangeInput" min="10" max="2000" step="10" value="10">
+                    <div id="rangeValueBox">Selected Range: 10</div>
+                    <div id="linechart"></div>
+                </div>
+            <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="row"> -->
+            <!-- <div class="col-12"> -->
+                <footer>
+                    <div class="footer-social" style="color: white;">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a href="../Details/bubblesortD.html">Bubble Sort</a></li>
+                            <li><a href="../Details/insertionsortD.html">Insertion Sort</a></li>
+                            <li><a href="../Details/selectionsortD.html">Selection Sort</a></li>
+                            <li><a href="../Details/countsortD.html">Counting Sort</a></li>
+                            <li><a href="../Details/quicksortD.html">Quick Sort</a></li>
+                        </ul>
+                    </div>
+                    <div class="divlast">
+                        &copy; 2023 All Rights Reserved
+                    </div>
+                </footer>
+            <!-- </div> -->
+        <!-- </div> -->
+    <!-- </div> -->
+        <script>
+            function bubbleSort(arr) {
+                const startTime = performance.now();
+                const n = arr.length;
+                let swapped;
+
+                for (let i = 0; i < n - 1; i++) {
+                    swapped = false;
+                    for (let j = 0; j < n - i - 1; j++) {
+                        if (arr[j] > arr[j + 1]) {
+                            [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+                            swapped = true;
+                        }
+                    }
+
+                    if (!swapped) {
+                        break; // If no two elements were swapped in the inner loop, the array is already sorted.
+                    }
+                }
+
+                return performance.now() - startTime;
+            }
+
+            function generateRandomData(size) {
+                // Create an empty array to store random numbers
+                var data = [];
+
+                // Repeat 'size' times to generate 'size' random numbers
+                for (var i = 0; i < size; i++) {
+                    // Generate a random number between 0 and 1 and add it to the array
+                    var randomNumber = Math.random();
+                    data.push(randomNumber);
+                }
+
+                // Return the array containing 'size' random numbers
+                return data;
+            }
+
+
+            function calculateAverageSortingTime(caseType, dataSize, numTrials) {
+                let totalSortingTime = 0;
+
+                for (let i = 0; i < numTrials; i++) {
+                    const dataToSort = generateRandomData(dataSize);
+
+                    if (caseType === "best") {
+                        dataToSort.sort();
+                    } else if (caseType === "worst") {
+                        dataToSort.sort((a, b) => b - a); //creates array in descending order
+                    }
+
+                    totalSortingTime += bubbleSort(dataToSort);
+                }
+
+                return totalSortingTime / numTrials;
+            }
+
+            function updateChartData(rangeValue) {
+                const numTrials = 10;
+                const dataPoints = {
+                    best: [],
+                    worst: [],
+                    average: []
+                };
+
+                for (let i = 1; i <= 10; i++) {
+                    const dataSize = i * (rangeValue / 10);
+
+                    for (const caseType of ["best", "worst", "average"]) {
+                        const sortingTime = calculateAverageSortingTime(caseType, dataSize, numTrials);
+                        dataPoints[caseType].push({ x: dataSize, y: sortingTime });
+                    }
+                }
+
+                const options = {
+                    animationEnabled: true,
+                    title: {
+                        text: "Bubble Sort Performance",
+                        fontFamily: "cursive",
+                        fontSize: 40,
+                    },
+                    axisX: {
+                        title: "Number of Elements"
+                    },
+                    axisY: {
+                        title: "Time (milliseconds)"
+                    },
+                    data: [
+                        {
+                            type: "line",
+                            name: "Best Case",
+                            showInLegend: true,
+                            dataPoints: dataPoints.best
+                        },
+                        {
+                            type: "line",
+                            name: "Worst Case",
+                            showInLegend: true,
+                            dataPoints: dataPoints.worst
+                        },
+                        {
+                            type: "line",
+                            name: "Average Case",
+                            showInLegend: true,
+                            dataPoints: dataPoints.average
+                        }
+                    ]
+                };
+
+                $("#linechart").CanvasJSChart(options);
+                $("#rangeValueBox").text("Selected Range: " + rangeValue);
+            }
+
+            $("#rangeInput").on("input", function () {
+                const rangeValue = parseInt($(this).val());
+                updateChartData(rangeValue);
+            });
+
+            // Initialize chart with default range value
+            updateChartData(10);
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

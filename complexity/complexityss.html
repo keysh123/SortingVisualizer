@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="bubblesort.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <title>VisualSortHub.com</title>
+</head>
+
+<body onload="get_info()">
+   
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <img src="images/logo.png" alt="" class="logo">
+            <button class="navbar-toggler menu" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 4%;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html" title="Back to home page"><i class="fa-solid fa-house" style="color: white;"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="bubblesortB" href="../Details/bubblesortD.html">Bubble Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="selectionsortB" href="../Details/selectionsortD.html">Selection Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="insertionsortB" href="../Details/insertionsortD.html">Insertion Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="mergesortB" href="../Details/countsortD.html">Counting Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="quicksortB" href="../Details/quicksortD.html">Quick Sort</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="letssort">
+                Selection Sort !
+            </div>
+        </div>
+    </nav>
+    <div class="navbars">
+        <a href="../co/selectionsortC.html" ><i class="fa-solid fa-code"></i>&nbsp; &nbsp; Code</a>
+        <a href="../visualazation/quicksort.html" ><i class="fa-solid fa-eye"></i>&nbsp; &nbsp; Visualazation</a>
+        <a href="../graph/selection_graph.html" ><i class="fa-solid fa-chart-line"></i>&nbsp; &nbsp; Graph</a>
+        <a href="../complexity/complexityss.html" class="active1" ><i class="fa-solid fa-magnifying-glass"></i>&nbsp; &nbsp; Complexity</a>
+    </div>
+    <div id="op">
+        <li class="li1"><a href="../co/selectionsortC.html">Code</a></li>
+        <li class="li1"><a href="../visualazation/quicksort.html">Visualization</a></li>
+        <li class="li1"><a href="../graph/selection_graph.html">Graph</a></li>
+        <li class="li1"><a href="../complexity/complexityss.html">Complexity</a></li>
+    </div>
+    
+    <div class="maincontent" id="demo" style="text-align: left; margin-bottom: 60px;">
+
+    </div>
+    <footer >
+        <div class="footer-social">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div>
+            <ul>
+                <li class="li1"><a href="../Details/bubblesortD.html">Bubble Sort</a></li>
+                <li class="li1"><a href="../Details/insertionsortD.html">Insertion Sort</a></li>
+                <li class="li1"><a href="../Details/selectionsortD.html">Selection Sort</a></li>
+                <li class="li1"><a href="../Details/countsortD.html">Counting Sort</a></li>
+                <li class="li1"><a href="../Details/quicksortD.html">Quick Sort</a></li>
+            </ul>
+        </div>
+        <div class="divlast">
+            &copy; 2023 All Rights Reserved
+        </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+    <script>
+        function get_info(){
+            const xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange=function(){
+                if(this.readyState==4 && this.status==200){
+                    document.getElementById("demo").innerHTML=this.responseText;
+                }
+            };
+            xhttp.open("GET","selectionsort.txt");
+            xhttp.send();
+        }
+    </script>
+
+</body>
+</html>

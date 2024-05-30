@@ -1,0 +1,45 @@
+
+    <h1 style="    text-align: center;
+    border-bottom: 5px double black;
+    
+    padding: 5px;
+    font-size: 3.5rem; padding-bottom:13px"><b>Bubble Sort Time and Space Complexity</b></h1>
+    <br> <br>
+    <h2 style="text-align:left;">Time Complexity:</h2>
+    <ul style="font-size:1.2rem">
+        <li><strong>Best Case:</strong> O(n) - In the best case scenario, when the input list is already sorted, Bubble Sort requires only one pass through the data to confirm that no swaps are needed. This results in linear time complexity.</li>
+        <br>
+        <li><strong>Worst Case:</strong> O(n^2) - In the worst case, when the input list is in reverse order, Bubble Sort will require n passes through the data, with n being the number of elements in the list. Each pass involves comparing and potentially swapping elements, leading to a quadratic time complexity.</li>
+        <br>
+        <li><strong>Average Case:</strong> O(n^2) - On average, Bubble Sort also exhibits quadratic time complexity because it involves a similar number of comparisons and swaps as in the worst case.</li>
+    </ul>
+    <br>
+    <h2 style="text-align:left;">Space Complexity:</h2 style="font-size:1.5rem">
+    <ul>
+    <li style="font-size:1.2rem">Bubble Sort has a space complexity of O(1) since it doesn't require additional memory allocation that scales with the size of the input. It sorts the elements in-place.</li>
+    </ul>
+    <br>
+    <h2 style="text-align:left;">Best Case Scenario:</h2>
+    <ul style="font-size:1.2rem">
+        <li>The best case occurs when the input list is already sorted, meaning no swaps are necessary.</li>
+        <li>Only one pass through the list is required to determine that no swaps are needed.</li>
+        <li>The time complexity is O(n), where n is the number of elements.</li>
+        <li>The algorithm's performance is optimal in this scenario.</li>
+    </ul>
+    <br>
+    <h2 style="text-align:left;">Worst Case Scenario:</h2>
+    <ul style="font-size:1.2rem">
+        <li>The worst case occurs when the input list is in reverse order, and Bubble Sort must make the maximum number of comparisons and swaps.</li>
+        <li>It requires n passes through the list, with each pass involving n-1 comparisons and potentially swaps.</li>
+        <li>The time complexity is O(n^2), where n is the number of elements.</li>
+        <li>The algorithm is highly inefficient in this scenario.</li>
+    </ul>
+    <br>
+    <h2 style="text-align:left;">Average Case Scenario:</h2>
+    <ul style="font-size:1.2rem">
+        <li>On average, Bubble Sort's performance is closer to the worst case.</li>
+        <li>It typically requires n passes through the list with n-1 comparisons and swaps during each pass.</li>
+        <li>The time complexity remains O(n^2) in the average case.</li>
+        <li>While it may perform better than the worst case in some real-world data scenarios, it is still not efficient for large datasets.</li>
+    </ul>
+

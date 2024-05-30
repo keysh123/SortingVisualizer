@@ -1,0 +1,38 @@
+<h1 style="    text-align: center;
+    border-bottom: 5px double black;
+    
+    padding: 5px;
+    font-size: 3.5rem; padding-bottom:13px"><b>-> Selection Sort Time and Space Complexity <-</b></h1>
+<br> <br>
+<h2 style="text-align:left;">Time Complexity:</h2>
+<ul style="font-size:1.2rem">
+    <li><strong>Best Case:</strong> O(n^2) - In the best case scenario, when the input list is already sorted, Selection Sort still requires n*(n-1)/2 comparisons, where n is the number of elements. This results in quadratic time complexity.</li>
+   <br> <li><strong>Worst Case:</strong> O(n^2) - In the worst case, when the input list is in reverse order or in an arbitrary order, Selection Sort will require the same n*(n-1)/2 comparisons and swaps. It exhibits quadratic time complexity.</li>
+  <br>  <li><strong>Average Case:</strong> O(n^2) - On average, Selection Sort also exhibits quadratic time complexity as it consistently performs the same number of comparisons and swaps as in the worst case.</li>
+</ul>
+<br>
+<h2 style="text-align:left;">Space Complexity:</h2 style="font-size:1.5rem">
+<ul>
+    <li style="font-size:1.2rem">Selection Sort has a space complexity of O(1) since it doesn't require additional memory allocation that scales with the size of the input. It sorts the elements in-place.</li>
+</ul>
+<br>
+<h2 style="text-align:left;">Best Case Scenario:</h2>
+<ul style="font-size:1.2rem">
+    <li>The best case scenario for Selection Sort is when the input list is already sorted, but it still requires a high number of comparisons.</li>
+    <li>It will need n*(n-1)/2 comparisons, where n is the number of elements.</li>
+    <li>The time complexity is O(n^2).</li>
+</ul>
+<br>
+<h2 style="text-align:left;">Worst Case Scenario:</h2>
+<ul style="font-size:1.2rem">
+    <li>The worst case scenario for Selection Sort occurs when the input list is in reverse order or in an arbitrary order, requiring the same number of comparisons as in the best case.</li>
+    <li>It will need n*(n-1)/2 comparisons and swaps.</li>
+    <li>The time complexity is O(n^2).</li>
+</ul>
+<br>
+<h2 style="text-align:left;">Average Case Scenario:</h2>
+<ul style="font-size:1.2rem">
+    <li>On average, Selection Sort's performance is consistently quadratic, requiring n*(n-1)/2 comparisons and swaps.</li>
+    <li>The time complexity remains O(n^2) in the average case.</li>
+    <li>Like the worst case, it is not efficient for large datasets.</li>
+</ul>

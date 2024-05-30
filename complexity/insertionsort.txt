@@ -1,0 +1,39 @@
+<h1 style="    text-align: center;
+    border-bottom: 5px double black;
+    
+    padding: 5px;
+    font-size: 3.5rem; padding-bottom:13px"><b>-> Insertion Sort Time and Space Complexity <-</b></h1>
+<br> <br>
+<h2 style="text-align:left;">Time Complexity:</h2>
+<ul style="font-size:1.2rem">
+    <li><strong>Best Case:</strong> O(n) - In the best case scenario, when the input list is already sorted, Insertion Sort requires only one pass through the data. This results in linear time complexity.</li>
+ <br>   <li><strong>Worst Case:</strong> O(n^2) - In the worst case, when the input list is in reverse order, Insertion Sort will require n*(n-1)/2 comparisons and swaps. This leads to quadratic time complexity.</li>
+  <br>  <li><strong>Average Case:</strong> O(n^2) - On average, Insertion Sort also exhibits quadratic time complexity, with n*(n-1)/2 comparisons and swaps, as it involves a similar number of operations as in the worst case.</li>
+</ul>
+<br>
+<h2 style="text-align:left;">Space Complexity:</h2 style="font-size:1.5rem">
+<ul>
+    <li style="font-size:1.2rem">Insertion Sort has a space complexity of O(1) since it doesn't require additional memory allocation that scales with the size of the input. It sorts the elements in-place.</li>
+</ul>
+<br>
+<h2 style="text-align:left;">Best Case Scenario:</h2>
+<ul style="font-size:1.2rem">
+    <li>The best case occurs when the input list is already sorted, and Insertion Sort requires minimal comparisons and no swaps.</li>
+    <li>Only one pass through the list is needed, resulting in linear time complexity (O(n)), where n is the number of elements.</li>
+    <li>The algorithm's performance is optimal in this scenario.</li>
+</ul>
+<br>
+<h2 style="text-align:left;">Worst Case Scenario:</h2>
+<ul style="font-size:1.2rem">
+    <li>The worst case occurs when the input list is in reverse order or in an arbitrary order, requiring the maximum number of comparisons and swaps.</li>
+    <li>It will need n*(n-1)/2 comparisons and swaps.</li>
+    <li>The time complexity is O(n^2), where n is the number of elements.</li>
+    <li>Insertion Sort is inefficient for large datasets in this scenario.</li>
+</ul>
+<br>
+<h2 style="text-align:left;">Average Case Scenario:</h2>
+<ul style="font-size:1.2rem">
+    <li>On average, Insertion Sort's performance is closer to the worst case as it consistently involves n*(n-1)/2 comparisons and swaps.</li>
+    <li>The time complexity remains O(n^2) in the average case.</li>
+    <li>While it may perform better than the worst case in some real-world data scenarios, it is still not efficient for large datasets.</li>
+</ul>

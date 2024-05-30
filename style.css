@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Dancing+Script&family=Orbitron&family=Pacifico&family=Roboto+Slab&family=Secular+One&family=Special+Elite&family=Ubuntu:wght@300&display=swap');
+
+body {
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(rgb(62, 62, 210), gold, );
+}
+
+#splashscreen {
+    display: flex;
+    background: powderblue;
+    background-size: 15%;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 99999;
+}
+
+#ring {
+    background: url(ringimg.webp) no-repeat center center/cover;
+    border-radius: 50%;
+    padding: 50px;
+}
+
+#sslogo {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.navbar {
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.nav-item {
+    padding: 0 10px;
+    margin: 10px;
+    border: 2px solid rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity));
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-item:hover {
+    filter: invert(100%);
+    background-color: black;
+    border: 2px solid white;
+    box-shadow: 0 0 0 1px black;
+}
+
+.nav-link {
+    font-weight: bold;
+}
+
+.logo {
+    height: 80px;
+    margin: 0 20px;
+    border: 2px solid black;
+    box-shadow: 0 0 0 1px white;
+}
+
+.letssort {
+    color: white;
+    margin: 10px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+}
+
+.mainbody {
+    background: url(bg5.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+    padding-top: 120px;
+    /* color: white; */
+    font-size: 1.2rem;
+    font-family: 'Bree Serif', serif;
+    padding-bottom: 50px;
+}
+
+.mainbody h1 {
+    font-size: 4rem;
+    padding: 0 0 10px 0;
+}
+
+.sortAlgos {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin: 2% auto;
+    background-color: rgba(128, 128, 128, .5);
+    padding: 5%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    transform: scale(0.9);
+    box-shadow: 0 0 0 2px black;
+}
+
+.sortAlgos:hover {
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, .6);
+    box-shadow: 0 0 0 5px black;
+    border-radius: 5px;
+}
+
+.sortAlgos:hover h1 {
+    text-shadow: 0 0 15px white;
+    border-bottom: 2px solid black;
+}
+
+.sortAlgos button {
+    display: block;
+    margin: 15px;
+    padding: 10px;
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: 22px;
+    width: 200px;
+    color: black;
+}
+
+.sortAlgos button:hover {
+    box-shadow: 0 0 0 2px white;
+    border-radius: 2px;
+    background-color: white;
+}
+
+.sortAlgos button a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.col-4 {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.col-8 {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    margin: auto;
+    padding: 2%;
+}
+
+.details {
+    background: url(bg4.jpg) no-repeat center center/cover;
+    background-image: linear-gradient(snow, honeydew, mistyrose);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-attachment: fixed;
+    color: black;
+    text-align: justify;
+    padding: 6% 2%;
+    margin: auto;
+    width: 85%;
+    align-items: baseline;
+    font-family: 'Bree Serif', serif;
+    font-size: 1.4rem;
+    line-height: 180%;
+    float: right;
+}
+
+.details h1 {
+    text-align: center;
+    border-bottom: 5px double black;
+    margin: 20px 0;
+    padding: 5px;
+    font-size: 3.5rem;
+}
+
+.navbars {
+    height: 100%;
+    width: 15%;
+    background-color: #2B3035;
+    padding-top: 20px;
+    position: fixed;
+    top: 96px;
+}
+
+.navbars a {
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: background-color 0.3s;
+}
+.navbars a:hover {
+    background-color: #555;
+}
+
+footer{
+    background-color: #212529;
+    text-align: center;
+}
+
+li{
+    display: inline;
+    margin: 10px;
+}
+
+li a{
+    text-decoration: none;
+    font-size: 100%;
+    color: white;
+    padding: 1%;
+}
+
+li a:hover{
+    color: rgb(158, 158, 158);
+}
+
+.footer-social a {
+    color: white;
+    text-decoration: none;
+    font-size: 145%;
+    height: 40%;
+    line-height: 40%;
+    text-align: center;
+    padding: 6% 3%;
+}
+
+.footer-social{
+    margin-bottom: 20px;
+    padding-top: 15px;
+}
+
+.divlast{
+    background-color: black;
+    color: rgb(163, 158, 158);
+    font-size: 20px;
+    padding: 10px;
+}
+
+/*  Responsiveness :- */
+
+@media (min-width: 1080px) and (max-width: 1280px) {
+    .nav-item {
+        font-size: 1.1rem;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .letssort {
+        font-size: 2rem;
+    }
+
+    .mainbody h1 {
+        font-size: 3.5rem;
+    }
+
+    .sortAlgos {
+        width: 95%;
+        font-size: 1.35rem;
+    }
+}
+
+@media (min-width: 990px) and (max-width: 1080px) {
+    .nav-item {
+        font-size: 1rem;
+        margin: 3px;
+        padding: 2px;
+    }
+
+    .letssort {
+        font-size: 2rem;
+    }
+
+    .mainbody h1 {
+        font-size: 3.5rem;
+    }
+
+    .sortAlgos {
+        width: 95%;
+        font-size: 1.35rem;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 990px) {
+    .nav-item {
+        font-size: 1rem;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .menu {
+        float: right;
+    }
+
+    .letssort {
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8rem;
+        margin: 0;
+        position: fixed;
+        top: 7%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .mainbody h1 {
+        font-size: 3.5rem;
+    }
+
+    .sortAlgos,
+    .details {
+        font-size: 1.35rem;
+    }
+
+    .col-8 {
+        padding: 5%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+    .logo {
+        height: 75px;
+        margin: 0 15px;
+    }
+
+    .nav-item {
+        font-size: 1rem;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .letssort {
+        font-size: 1.8rem;
+        margin: 0;
+        position: fixed;
+        top: 7%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .mainbody h1 {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    .sortAlgos {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.35rem;
+    }
+
+    .details {
+        font-size: 1.2rem;
+        padding-left: 20px;
+    }
+
+    .navbars{
+        width: 20%;
+    }
+
+    .col-8 {
+        width: 90%;
+    }
+
+    #selectionsort,
+    #countsort {
+        flex-direction: column-reverse;
+    }
+
+    .sortAlgos button {
+        width: 180%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+    .logo {
+        height: 70px;
+        margin: 0 8px;
+    }
+
+    .nav-item {
+        font-size: 1rem;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .letssort {
+        font-size: 1.8rem;
+        margin: 0;
+        position: fixed;
+        top: 7%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .mainbody h1 {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    .sortAlgos {
+        display: flex;
+        flex-direction: column;
+        padding: 1%;
+        font-size: 1.25rem;
+    }
+
+    .details {
+        font-size: 1.2rem;
+        padding-left: 20px;
+    }
+
+    .navbars{
+        /* padding-top: 16%; */
+        display: none;
+        /* flex-direction: row; */
+    }
+
+    .col-8 {
+        width: 80%;
+    }
+
+    #selectionsort,
+    #countsort {
+        flex-direction: column-reverse;
+    }
+
+    .sortAlgos button {
+        width: 200%;
+    }
+}
+
+@media (max-width: 500px) {
+    .logo {
+        height: 60px;
+        margin: 0 5px;
+    }
+
+    .nav-item {
+        font-size: 1rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .letssort {
+        font-size: 1.8rem;
+        margin: 0;
+        position: fixed;
+        top: 6%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .mainbody {
+        font-size: 0.2rem;
+    }
+
+    .mainbody h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .sortAlgos {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 1%;
+        font-size: 1.2rem;
+    }
+
+    .details {
+        font-size: 1.2rem;
+        padding-left: 20px;
+    }
+
+    .navbars{
+        display: none;
+    }
+
+    .col-8 {
+        width: 80%;
+    }
+
+    #selectionsort,
+    #countsort {
+        flex-direction: column-reverse;
+    }
+
+    .sortAlgos button {
+        width: 200%;
+    }
+}

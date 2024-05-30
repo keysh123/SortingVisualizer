@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <title>QuickSortDetails</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <img src="../Images/logo.png" alt="" class="logo">
+            <button class="navbar-toggler menu" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 4%;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html" title="Back to home page"><i class="fa-solid fa-house" style="color: white;"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="bubblesortD" href="bubblesortD.html">Bubble Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="selectionsortD" href="selectionsortD.html">Selection Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="insertionsortD" href="insertionsortD.html">Insertion Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="countsortD" href="countsortD.html">Counting Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="quicksortD" href="quicksortD.html">Quick Sort</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="letssort">
+                Quick Sort !
+            </div>
+        </div>
+    </nav>
+    <div class="navbars">
+        <a href="../co/quicksortC.html" ><i class="fa-solid fa-code"></i>&nbsp; &nbsp; Code</a>
+        <a href="../visualazation/quicksort.html" class="active1"><i class="fa-solid fa-eye"></i>&nbsp; &nbsp; Visualazation</a>
+        <a href="../graph/quick_graph.html" ><i class="fa-solid fa-chart-line"></i>&nbsp; &nbsp; Graph</a>
+        <a href="../complexity/complexityqs.html" ><i class="fa-solid fa-magnifying-glass"></i>&nbsp; &nbsp; Complexity</a>
+    </div>
+    <div id="op">
+        <li><a href="../co/quicksortC.html">Code</a></li>
+        <li><a href="../visualazation/quicksort.html">Visualization</a></li>
+        <li><a href="../graph/quick_graph.html">Graph</a></li>
+        <li><a href="../complexity/complexityqs.html">Complexity</a></li>
+    </div>
+    <div class="details">
+        <br>
+        <h1>Quick Sort</h1>
+        Quick sort, also known as partition-exchange sort, is a widely used and efficient comparison-based sorting algorithm. It is known for its speed and ability to sort large datasets efficiently. Quick sort is a divide-and-conquer algorithm that works by selecting a "pivot" element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. Here are the details of how quick sort works: <br> <br>
+
+        <b>1.Pivot Selection :</b> Choose a pivot element from the array. The pivot can be selected in various ways, but a common approach is to take the first element, the last element, or the middle element of the array. <br>
+
+        <b>2.Partitioning :</b> Rearrange the elements in the array so that all elements less than the pivot come before it, and all elements greater than the pivot come after it. This is done by moving elements around the pivot in such a way that the pivot ends up in its correct sorted position.<br>
+
+        <b>3.Recursive Sorting :</b> Recursively apply the quick sort algorithm to the sub-arrays created by the partitioning step. The left sub-array contains elements less than the pivot, and the right sub-array contains elements greater than the pivot. Continue this process until the entire array is sorted.<br>
+
+        <b>4.Termination :</b> The algorithm terminates when the sub-arrays become small enough (e.g., containing only one or zero elements), in which case they are considered sorted.<br> <br>
+
+        Quick sort has the following characteristics : <br><br>
+
+        <b><span>&#8226; </span>Time Complexity : </b> On average, quick sort has an expected time complexity of O(n log n), which is highly efficient. However, in the worst case, when the pivot is not well chosen (e.g., always picking the smallest or largest element), it can have a time complexity of O(n^2).<br>
+
+        <b><span>&#8226; </span>Not Stable : </b> Quick sort is not a stable sorting algorithm, as it may change the relative order of equal elements.<br>
+        
+        <b><span>&#8226; </span>In-Place : </b> Quick sort is an in-place sorting algorithm, meaning it sorts the array without requiring additional memory for temporary storage.<br>
+
+        <b><span>&#8226; </span>Adaptive : </b> Quick sort can be adaptive, meaning its performance can improve when sorting partially sorted lists.<br>
+
+        <b><span>&#8226; </span>Randomization : </b> To mitigate the worst-case time complexity, randomization techniques can be used to select the pivot element, reducing the likelihood of encountering unfavorable pivot selections.<br><br>
+
+        Quick sort is a versatile and widely used sorting algorithm, especially for large datasets, and it is often the preferred choice for sorting in practice. When well-implemented and combined with good pivot selection strategies, it exhibits excellent average-case performance. However, it's important to be aware of potential worst-case scenarios and take steps to mitigate them.<br>
+    </div>
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div>
+            <ul>
+                <li class="fli"><a href="bubblesortD.html">Bubble Sort</a></li>
+                <li class="fli"><a href="insertionsortD.html">Insertion Sort</a></li>
+                <li class="fli"><a href="selectionsortD.html">Selection Sort</a></li>
+                <li class="fli"><a href="countsortD.html">Count Sort</a></li>
+                <li class="fli"><a href="quicksortD.html">Quick Sort</a></li>
+            </ul>
+        </div>
+        <div class="divlast">
+            &copy; 2023 All Rights Reserved
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

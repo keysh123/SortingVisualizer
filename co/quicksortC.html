@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bubble Sort</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../Details/style.css">
+    <link rel="stylesheet" href="sorting.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <img src="../Images/logo.png" alt="" class="logo">
+            <button class="navbar-toggler menu" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 4%;">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../index.html" title="Back to home page"><i class="fa-solid fa-house"
+                            style="color: white;"></i>
+                    </a>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="bubblesortD" href="../Details/bubblesortD.html">Bubble Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="selectionsortD" href="../Details/selectionsortD.html">Selection Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="insertionsortD" href="../Details/insertionsortD.html">Insertion Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="countsortD" href="../Details/countsortD.html">Count Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="quicksortD" href="../Details/quicksortD.html">Quick Sort</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="letssort">
+                Quick Sort !
+            </div>
+        </div>
+    </nav>
+    <div class="navbars">
+      <a href="../co/quicksortC.html" class="active1" style="color: white;"><i class="fa-solid fa-code"></i>&nbsp; &nbsp;Code</a>
+      <a href="../visualazation/quicksort.html" style="color: white;"><i class="fa-solid fa-eye"></i>&nbsp; &nbsp; Visualazation</a>
+      <a href="../graph/quick_graph.html" style="color: white;"><i class="fa-solid fa-chart-line"></i>&nbsp; &nbsp; Graph</a>
+      <a href="../complexity/complexityqs.html" style="color: white;"><i class="fa-solid fa-magnifying-glass"></i>&nbsp; &nbsp; Complexity</a>
+  </div>
+  <div id="op">
+    <li><a href="../co/quicksortC.html">Code</a></li>
+    <li><a href="../visualazation/quicksort.html">Visualization</a></li>
+    <li><a href="../graph/quick_graph.html">Graph</a></li>
+    <li><a href="../complexity/complexityqs.html">Complexity</a></li>
+</div>
+    <div class="details">
+      <br>
+        <!-- <h2>Quick Sorting code in C, C++ and Java</h2> -->
+        <ul class="nav nav-tabs cul">
+            <li class="nav-item cli">
+                <a class="nav-link active" data-bs-toggle="tab" href="#c">C</a>
+            </li>
+            <li class="nav-item cli">
+                <a class="nav-link" data-bs-toggle="tab" href="#c1">C++</a>
+            </li>
+            <li class="nav-item cli">
+                <a class="nav-link" data-bs-toggle="tab" href="#java">Java</a>
+            </li>
+            <li class="libtn"><button class="active panelbtn" href="#mode" onclick="myFunction()"><img
+                        src="i1.png" alt="mode" height="30px"> Mode </button></li>
+        </ul>
+
+        <div class="tab-content codebox">
+          <div id="c" class="tab-pane fade show active">
+            <pre class="pre1">
+              // Quick sort in C
+
+#include <stdio.h>
+
+// function to swap elements
+void swap(int *a, int *b) {
+  int t = *a;
+  *a = *b;
+  *b = t;
+}
+
+// function to find the partition position
+int partition(int array[], int low, int high) {
+  
+  // select the rightmost element as pivot
+  int pivot = array[high];
+  
+  // pointer for greater element
+  int i = (low - 1);
+
+  // traverse each element of the array
+  // compare them with the pivot
+  for (int j = low; j < high; j++) {
+    if (array[j] <= pivot) {
+        
+      // if element smaller than pivot is found
+      // swap it with the greater element pointed by i
+      i++;
+      
+      // swap element at i with element at j
+      swap(&array[i], &array[j]);
+    }
+  }
+
+  // swap the pivot element with the greater element at i
+  swap(&array[i + 1], &array[high]);
+  
+  // return the partition point
+  return (i + 1);
+}
+
+void quickSort(int array[], int low, int high) {
+  if (low < high) {
+    
+    // find the pivot element such that
+    // elements smaller than pivot are on left of pivot
+    // elements greater than pivot are on right of pivot
+    int pi = partition(array, low, high);
+    
+    // recursive call on the left of pivot
+    quickSort(array, low, pi - 1);
+    
+    // recursive call on the right of pivot
+    quickSort(array, pi + 1, high);
+  }
+}
+
+// function to print array elements
+void printArray(int array[], int size) {
+  for (int i = 0; i < size; ++i) {
+    printf("%d  ", array[i]);
+  }
+  printf("\n");
+}
+
+// main function
+int main() {
+  int data[] = {8, 7, 2, 1, 0, 9, 6};
+  
+  int n = sizeof(data) / sizeof(data[0]);
+  
+  printf("Unsorted Array\n");
+  printArray(data, n);
+  
+  // perform quicksort on data
+  quickSort(data, 0, n - 1);
+  
+  printf("Sorted array in ascending order: \n");
+  printArray(data, n);
+}
+</pre>
+</div>
+            <div id="c1" class="tab-pane fade show active">
+                <pre class="pre1">
+                // Quick sort in C++
+        
+        #include &lt;iostream&gt;
+        using namespace std;
+        
+        // function to swap elements
+        void swap(int *a, int *b) {
+          int t = *a;
+          *a = *b;
+          *b = t;
+        }
+        
+        // function to print the array
+        void printArray(int array[], int size) {
+          int i;
+          for (i = 0; i < size; i++)
+            cout << array[i] << " ";
+          cout << endl;
+        }
+        
+        // function to rearrange array (find the partition point)
+        int partition(int array[], int low, int high) {
+            
+          // select the rightmost element as pivot
+          int pivot = array[high];
+          
+          // pointer for greater element
+          int i = (low - 1);
+        
+          // traverse each element of the array
+          // compare them with the pivot
+          for (int j = low; j < high; j++) {
+            if (array[j] <= pivot) {
+                
+              // if element smaller than pivot is found
+              // swap it with the greater element pointed by i
+              i++;
+              
+              // swap element at i with element at j
+              swap(&array[i], &array[j]);
+            }
+          }
+          
+          // swap pivot with the greater element at i
+          swap(&array[i + 1], &array[high]);
+          
+          // return the partition point
+          return (i + 1);
+        }
+        
+        void quickSort(int array[], int low, int high) {
+          if (low < high) {
+              
+            // find the pivot element such that
+            // elements smaller than pivot are on left of pivot
+            // elements greater than pivot are on righ of pivot
+            int pi = partition(array, low, high);
+        
+            // recursive call on the left of pivot
+            quickSort(array, low, pi - 1);
+        
+            // recursive call on the right of pivot
+            quickSort(array, pi + 1, high);
+          }
+        }
+        
+        // Driver code
+        int main() {
+          int data[] = {8, 7, 6, 1, 0, 9, 2};
+          int n = sizeof(data) / sizeof(data[0]);
+          
+          cout << "Unsorted Array: \n";
+          printArray(data, n);
+          
+          // perform quicksort on data
+          quickSort(data, 0, n - 1);
+          
+          cout << "Sorted array in ascending order: \n";
+          printArray(data, n);
+        }
+              </pre>
+            </div>
+            <div id="java" class="tab-pane fade">
+                <!-- <h3 style="color: aliceblue;">Java</h3> -->
+                <pre class="pre1">
+                // Quick sort in Java
+        
+        import java.util.Arrays;
+        
+        class Quicksort {
+        
+          // method to find the partition position
+          static int partition(int array[], int low, int high) {
+            
+            // choose the rightmost element as pivot
+            int pivot = array[high];
+            
+            // pointer for greater element
+            int i = (low - 1);
+        
+            // traverse through all elements
+            // compare each element with pivot
+            for (int j = low; j < high; j++) {
+              if (array[j] <= pivot) {
+        
+                // if element smaller than pivot is found
+                // swap it with the greatr element pointed by i
+                i++;
+        
+                // swapping element at i with element at j
+                int temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+              }
+        
+            }
+        
+            // swapt the pivot element with the greater element specified by i
+            int temp = array[i + 1];
+            array[i + 1] = array[high];
+            array[high] = temp;
+        
+            // return the position from where partition is done
+            return (i + 1);
+          }
+        
+          static void quickSort(int array[], int low, int high) {
+            if (low < high) {
+        
+              // find pivot element such that
+              // elements smaller than pivot are on the left
+              // elements greater than pivot are on the right
+              int pi = partition(array, low, high);
+              
+              // recursive call on the left of pivot
+              quickSort(array, low, pi - 1);
+        
+              // recursive call on the right of pivot
+              quickSort(array, pi + 1, high);
+            }
+          }
+        }
+        
+        // Main class
+        class Main {
+          public static void main(String args[]) {
+        
+            int[] data = { 8, 7, 2, 1, 0, 9, 6 };
+            System.out.println("Unsorted Array");
+            System.out.println(Arrays.toString(data));
+        
+            int size = data.length;
+        
+            // call quicksort() on array data
+            Quicksort.quickSort(data, 0, size - 1);
+        
+            System.out.println("Sorted Array in Ascending Order: ");
+            System.out.println(Arrays.toString(data));
+          }
+        }
+            </pre>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div>
+          <ul>
+            <li class="li1"><a href="../Details/bubblesortD.html">Bubble Sort</a></li>
+            <li class="li1"><a href="../Details/insertionsortD.html">Insertion Sort</a></li>
+            <li class="li1"><a href="../Details/selectionsortD.html">Selection Sort</a></li>
+            <li class="li1"><a href="../Details/countsortD.html">Counting Sort</a></li>
+            <li class="li1"><a href="../Details/quicksortD.html">Quick Sort</a></li>
+        </ul>
+        </div>
+        <div class="divlast">
+            &copy; 2023 All Rights Reserved
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        function myFunction() {
+            var elements = document.querySelectorAll(".pre1");
+            elements.forEach(function (element) {
+                element.classList.toggle("dark-mode");
+            });
+        }
+    </script>
+</body>
+
+</html>

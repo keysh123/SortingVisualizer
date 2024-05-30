@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <title>SelectionSortDetails</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <img src="../Images/logo.png" alt="" class="logo">
+            <button class="navbar-toggler menu" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 4%;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html" title="Back to home page"><i class="fa-solid fa-house" style="color: white;"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="bubblesortD" href="bubblesortD.html">Bubble Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="selectionsortD" href="selectionsortD.html">Selection Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="insertionsortD" href="insertionsortD.html">Insertion Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="countsortD" href="countsortD.html">Counting Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="quicksortD" href="quicksortD.html">Quick Sort</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="letssort">
+                Selection Sort !
+            </div>
+        </div>
+    </nav>
+    <div class="navbars">
+        <a href="../co/selectionsortC.html" ><i class="fa-solid fa-code"></i>&nbsp; &nbsp; Code</a>
+        <a href="../visualazation/selectionsort.html" class="active1"><i class="fa-solid fa-eye"></i>&nbsp; &nbsp; Visualazation</a>
+        <a href="../graph/selection_graph.html" ><i class="fa-solid fa-chart-line"></i>&nbsp; &nbsp; Graph</a>
+        <a href="../complexity/complexityss.html" ><i class="fa-solid fa-magnifying-glass"></i>&nbsp; &nbsp; Complexity</a>
+    </div>
+    <div id="op">
+        <li><a href="../co/selectionsortC.html">Code</a></li>
+        <li><a href="../visualazation/selectionsort.html">Visualization</a></li>
+        <li><a href="../graph/selection_graph.html">Graph</a></li>
+        <li><a href="../complexity/complexityss.html">Complexity</a></li>
+    </div>
+    <div class="details">
+        <br>
+        <h1>Selection Sort</h1>
+        Selection sort is a simple and straightforward comparison-based sorting algorithm. It works by dividing the
+        input list into two sublists: the sorted sublist and the unsorted sublist. The algorithm repeatedly selects the
+        smallest (or largest, depending on the sorting order) element from the unsorted sublist and moves it to the end
+        of the sorted sublist. This process continues until the entire list is sorted. Here are the details of how
+        selection sort works: <br> <br>
+
+        <b>1.Initialization :</b> Start with the entire list as an unsorted sublist and an empty sorted sublist. <br>
+
+        <b>2.Finding the Minimum (or Maximum) Element : </b> In each pass through the unsorted sublist, find the minimum
+        (or maximum) element. To do this, you iterate through the unsorted sublist, comparing each element with the
+        current minimum (or maximum). If a smaller (or larger) element is found, update the minimum (or maximum)
+        element.<br>
+
+        <b>3.Swapping :</b> After completing the pass through the unsorted sublist, swap the found minimum (or maximum)
+        element with the first element in the unsorted sublist. This effectively moves the selected element to the end
+        of the sorted sublist.<br>
+
+        <b>4.Expanding the Sorted Sublist :</b> Increase the size of the sorted sublist by one, and decrease the size of
+        the unsorted sublist by one. The selected element is now part of the sorted sublist.<br>
+
+        <b>5.Repeat :</b> Repeat steps 2-4 until the entire list is sorted.<br>
+
+        <b>6.Termination :</b> The algorithm terminates when the unsorted sublist becomes empty, and the sorted sublist
+        contains all the elements in the sorted order.<br><br>
+
+        Selection sort has the following characteristics:<br><br>
+
+        <b><span>&#8226; </span>Time Complexity : </b> Selection sort has a time complexity of O(n^2) in all cases, where n is the number of elements in the list. This makes it inefficient for large datasets but simple to understand and implement.<br>
+
+        <b><span>&#8226; </span>Stability : </b> Selection sort is not a stable sorting algorithm, as it may change the order of equal elements.<br>
+
+        <b><span>&#8226; </span>In-Place : </b> Selection sort is an in-place sorting algorithm, which means it doesn't require additional memory for temporary storage.<br>
+
+        <b><span>&#8226; </span>Fixed Number of Swaps : </b> Unlike other sorting algorithms, such as bubble sort, selection sort always performs a fixed number of swaps, making it less data-sensitive in this regard.<br><br>
+
+        Selection sort is typically not the most efficient sorting algorithm for large datasets due to its quadratic time complexity. Other algorithms like quicksort, mergesort, or heapsort are generally preferred for practical sorting applications. However, it remains a useful educational tool for understanding the basic principles of sorting algorithms.<br>
+    </div>
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div>
+            <ul>
+                <li class="fli"><a href="bubblesortD.html">Bubble Sort</a></li>
+                <li class="fli"><a href="insertionsortD.html">Insertion Sort</a></li>
+                <li class="fli"><a href="selectionsortD.html">Selection Sort</a></li>
+                <li class="fli"><a href="countsortD.html">Count Sort</a></li>
+                <li class="fli"><a href="quicksortD.html">Quick Sort</a></li>
+            </ul>
+        </div>
+        <div class="divlast">
+            &copy; 2023 All Rights Reserved
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

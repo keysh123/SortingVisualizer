@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <title>VisualSortHub.com</title>
+</head>
+
+<body>
+    <div id="splashscreen">
+        <div id="ring">
+            <img id="sslogo" src="images/logo.png">
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <img src="images/logo.png" alt="" class="logo">
+            <button class="navbar-toggler menu" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 4%;">
+                    <li class="nav-item" >
+                        <a class="nav-link" href="index.html" title="Back to home page"><i class="fa-solid fa-house" style="color: white;"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="bubblesortD" href="Details/bubblesortD.html">Bubble Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="selectionsortD" href="Details/selectionsortD.html">Selection Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="insertionsortD" href="Details/insertionsortD.html">Insertion Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="countsortD" href="Details/countsortD.html">Counting Sort</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="quicksortD" href="Details/quicksortD.html">Quick Sort</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="letssort">
+                Let's Sort !
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid mainbody">
+        <marquee behavior="scroll" direction="left"
+            style="margin-top: 20px; background-color: silver; color: black; padding: 5px;"><a href="#quiz"
+                style="text-decoration: wavy; color: black; font-size: 25px;">~Unlock
+                the thrill of knowledge and embark on an exciting journey with our quizzes! Dive in, test your wits, and
+                discover just how fascinating learning can be~</a></marquee>
+        <div id="bubblesort" class="container-fluid sortAlgos">
+            <div class="col-8">
+                <h1>Bubble Sort</h1>
+                <br>
+                <p class="pbubble">Bubble sorting is a simple algorithm that allows you to sort elements in a list
+                    by
+                    comparing adjacent elements and swapping them if they are in the wrong order. The algorithm
+                    repeats
+                    this process until the list is fully sorted. Bubble sorting is named for the way the larger
+                    elements
+                    "bubble" up to the top of the list.</p>
+            </div>
+            <div class="col-4">
+                <button><a href="co/bubblesortC .html">Code</a></button>
+                <button><a href="visualazation/bubblesort.html">Visualization</a></button>
+                <button><a href="complexity/complexitybs.html">Complexity</a></button>
+                <button><a href="graph/bubble_graph.html">Graph</a></button>
+            </div>
+        </div>
+
+        <div id="selectionsort" class="container-fluid sortAlgos">
+            <div class="col-4">
+                <button><a href="co/selectionsortC.html">Code</a></button>
+                <button><a href="visualazation/selectionsort.html">Visualization</a></button>
+                <button><a href="complexity/complexityss.html">Complexity</a></button>
+                <button><a href="graph/selection_graph.html">Graph</a></button>
+            </div>
+            <div class="col-8">
+                <h1>Selection Sort</h1>
+                <br>
+                <p class="pselection">Selection sort is a simple sorting algorithm that works by repeatedly finding
+                    the
+                    smallest element in the unsorted part of the list and moving it to the sorted part. It divides
+                    the
+                    list into two parts: a sorted part at the left end and an unsorted part at the right end.It is
+                    easy
+                    to implement but not very efficient for large data sets.</p>
+            </div>
+        </div>
+
+        <div id="insertionsort" class="container-fluid sortAlgos">
+            <div class="col-8">
+                <h1>Insertion Sort</h1>
+                <br>
+                <p class="pinsertion">Insertion sort is a simple sorting algorithm that sorts an array or a list by
+                    moving each element to its correct position in a sorted part. It works like sorting playing
+                    cards in
+                    your hand. It is efficient for small and nearly sorted data sets, but less efficient for large
+                    and
+                    unsorted data sets.It works by gradually building a sorted part from the left end of the array
+                    or
+                    list.</p>
+            </div>
+            <div class="col-4">
+                <button><a href="co/insertionsortC.html">Code</a></button>
+                <button><a href="visualazation/insertionsort.html">Visualization</a></button>
+                <button><a href="complexity/complexityis.html">Complexity</a></button>
+                <button><a href="graph/insertion_graph.html">Graph</a></button>
+            </div>
+        </div>
+
+        <div id="countingsort" class="container-fluid sortAlgos">
+            <div class="col-4">
+                <button><a href="co/countsortC.html">Code</a></button>
+                <button><a href="visualazation/countsort.html">Visualization</a></button>
+                <button><a href="complexity/complexitycs.html">Complexity</a></button>
+                <button><a href="graph/counting_graph.html">Graph</a></button>
+            </div>
+            <div class="col-8">
+                <h1>Counting Sort</h1>
+                <br>
+                <p class="pcounting">Counting sort, also known as counting sort algorithm, is a non-comparative integer
+                    sorting algorithm. It works by counting the number of elements that have distinct key values and
+                    using these counts to determine the positions of the elements in the sorted output. Counting sort is
+                    efficient when sorting a range of integers with a small, known range of values.</p>
+            </div>
+        </div>
+
+        <div id="quicksort" class="container-fluid sortAlgos">
+            <div class="col-8">
+                <h1>Quick Sort</h1>
+                <br>
+                <p class="pquick">Quick sort is a sorting algorithm that divides an array or a list into two parts
+                    based
+                    on a pivot element, and then sorts each part recursively. It is fast and efficient for large and
+                    random data sets, but can be slow for small or nearly sorted data sets. It is also known as
+                    partition-exchange sort.</p>
+            </div>
+            <div class="col-4">
+                <button><a href="co/quicksortC.html">Code</a></button>
+                <button><a href="visualazation/quicksort.html">Visualization</a></button>
+                <button><a href="complexity/complexityqs.html">Complexity</a></button>
+                <button><a href="graph/quick_graph.html">Graph</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="d-grid">
+        <button id="quiz" class="btn btn-block btn-warning p-3 border border-dark border-2 m-5"
+            style="font-size: 30px; color: black;"><a href="http://localhost/fin/quiz/registration.html" style="color: black;" target="_blank">!!!
+                Take a Quiz !!! </a></button>
+    </div>
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="Details/bubblesortD.html">Bubble Sort</a></li>
+                <li><a href="Details/insertionsortD.html">Insertion Sort</a></li>
+                <li><a href="Details/selectionsortD.html">Selection Sort</a></li>
+                <li><a href="Details/countsortD.html">Counting Sort</a></li>
+                <li><a href="Details/quicksortD.html">Quick Sort</a></li>
+            </ul>
+        </div>
+        <div class="divlast">
+            &copy; 2023 All Rights Reserved
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<h1 style="    text-align: center;
+    border-bottom: 5px double black;
+    
+    padding: 5px;
+    font-size: 3.5rem; padding-bottom:13px"><b>-> Counting Sort Time and Space Complexity <-</b></h1>
+<br> <br>
+<h2 style="text-align:left;">Time Complexity:</h2>
+<ul style="font-size:1.2rem">
+    <li><strong>Best Case:</strong> O(n + k) - In the best case scenario, when the range of input values (k) is not much larger than the number of elements (n), Counting Sort can achieve linear time complexity.</li>
+   <br> <li><strong>Worst Case:</strong> O(n + k) - In the worst case, when the range of input values (k) is significantly larger than the number of elements (n), Counting Sort still exhibits linear time complexity.</li>
+   <br> <li><strong>Average Case:</strong> O(n + k) - Counting Sort's average time complexity remains linear, depending on the range of input values and the number of elements.</li>
+</ul>
+<br>
+<h2 style="text-align:left;">Space Complexity:</h2 style="font-size:1.5rem">
+<ul>
+    <li style="font-size:1.2rem">Counting Sort has a space complexity of O(k) because it requires additional memory allocation for the counting array to represent the frequency of each unique element in the input. The space required depends on the range of input values (k).</li>
+</ul>
+<br>
+<h2 style="text-align:left;">Best Case Scenario:</h2>
+<ul style="font-size:1.2rem">
+    <li>The best case occurs when the range of input values (k) is not much larger than the number of elements (n).</li>
+    <li>Counting Sort can achieve linear time complexity, O(n + k), as it counts the frequency of each unique element and creates the sorted output.</li>
+    <li>It is highly efficient in this scenario.</li>
+</ul>
+<br>
+<h2 style="text-align:left;">Worst Case Scenario:</h2>
+<ul style="font-size:1.2rem">
+    <li>The worst case occurs when the range of input values (k) is significantly larger than the number of elements (n).</li>
+    <li>Counting Sort still exhibits linear time complexity, O(n + k), as it counts the frequency of each unique element and creates the sorted output.</li>
+    <li>It remains efficient, even in the worst case, but the space complexity may be a concern when k is very large.</li>
+</ul>
+<br>
+<h2 style="text-align:left;">Average Case Scenario:</h2>
+<ul style="font-size:1.2rem">
+    <li>Counting Sort's average time complexity is linear, O(n + k), and its performance depends on the range of input values (k) and the number of elements (n).</li>
+    <li>It is a stable and efficient sorting algorithm for scenarios where the range of values is not excessively large compared to the number of elements.</li>
+</ul>
